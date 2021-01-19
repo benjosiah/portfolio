@@ -1,3 +1,20 @@
-@tailwind base;
+@tailwind screens;
 @tailwind components;
 @tailwind utilities;
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #100921;
+    background-image:
+    /* linear-gradient( rgb(38, 38, 38), black), */
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+    /* radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px) */
+    
+    ;
+    background-size: 450px 450px, 250px 250px, 150px 150px, 50px 50px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    /* background-size: 45% 45%, 25% 25%, 15% 15%, 5% 5%;  */
+}
