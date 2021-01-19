@@ -1,7 +1,7 @@
 <template>
   <div id="app" class=" w-full"> 
     <!-- landing -->
-    <div class="flex flex-wrap w-full m-auto items-center justify-around">
+    <div class="flex flex-wrap w-full container h-screen m-auto items-center justify-around">
       
       <div class="text-white text-center text-2xl w-9/20 border-solid">
         <h1 class="py-0 my-0">I am Ben Josiah</h1>
@@ -16,7 +16,7 @@
     <div class="pb-10 w-4/5 md:w-full m-auto ">
     <h1 class=" text-grey-light">Skills :</h1>
     <div class="flex text-black font-black flex-wrap lg:justify-between justify-around h-full w-full">
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">   Programing Languages :</h3>
           <ul>
             <li v-for="language in Skills.languages"  :key="language" class=" inline pr-6">
@@ -25,7 +25,7 @@
             </li>
           </ul>
         </div>
-        <div class="  sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class="  sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker ">  Frameworks :</h3>
           <ul>
             <li v-for="framework in Skills.Frameworks"  :key="framework" class=" inline pr-6">
@@ -34,7 +34,7 @@
             </li>
           </ul>
         </div>
-        <div class="md:w-2/5 sm:w-4/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class="md:w-2/5 sm:w-4/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker ">   Vue :</h3>
           <ul>
             <li v-for="vue in Skills.vue"  :key="vue" class=" inline pr-6">
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">  Laravel :</h3>
           <ul>
             <li v-for="laravel in Skills.laravel"  :key="laravel" class=" inline pr-6">
@@ -52,7 +52,7 @@
             </li>
           </ul>
         </div>
-         <div class="sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+         <div class="sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">  Tools :</h3>
           <ul>
             <li v-for="tool in Skills.tools"  :key="tool" class=" inline pr-6">
@@ -61,7 +61,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Storage/Database :</h3>
           <ul>
             <li v-for="storage in Skills.Storage"  :key="storage" class=" inline pr-6">
@@ -70,7 +70,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Cloud/Hosting :</h3>
           <ul>
             <li v-for="storage in Skills.Cloud"  :key="storage" class=" inline pr-6">
@@ -117,7 +117,33 @@
         </div>
       </div>
     </div> 
-
+    <div class=" hidden">
+      <div id="ball1" class="ball"></div>
+      <div id="ball2" class="ball"></div>
+      <div id="ball3" class="ball"></div>
+      <div id="ball4" class="ball"></div>
+      <div id="ball5" class="ball"></div>
+      <div id="ball6" class="ball"></div>
+      <div id="ball7" class="ball"></div>
+      <div id="ball8" class="ball"></div>
+      <div id="ball9" class="ball"></div>
+      <div id="ball10" class="ball"></div>
+      <div id="ball11" class="ball"></div>
+      <div id="ball12" class="ball"></div>
+      <div id="ball13" class="ball"></div>
+      <div id="ball14" class="ball"></div>
+      <div id="ball15" class="ball"></div>
+      <div id="ball16" class="ball"></div>
+      <div id="ball17" class="ball"></div>
+      <div id="ball23" class="ball"></div>
+      <div id="ball24" class="ball"></div>
+      <div id="ball18" class="ball"></div>
+      <div id="ball19" class="ball"></div>
+      <div id="ball20" class="ball"></div>
+      <div id="ball121" class="ball"></div>
+      <div id="ball22" class="ball"></div>
+    </div>
+    
   </div>
 </template>
 

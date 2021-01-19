@@ -3,9 +3,10 @@
 @tailwind utilities;
 body{
     width: 100%;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
-    background: #100921;
+    background: #0c0216;
     background-image:
     /* linear-gradient( rgb(38, 38, 38), black), */
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
@@ -17,4 +18,179 @@ body{
     background-size: 450px 450px, 250px 250px, 150px 150px, 50px 50px; 
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     /* background-size: 45% 45%, 25% 25%, 15% 15%, 5% 5%;  */
+}
+.ball{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: -100;
+    border-radius: 50%;
+    box-shadow: inset -5px 5px 6px 3px rgb(250, 244, 244);
+    top:-100px;
+    animation: drop;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes drop{
+    0%{
+        top:-10px
+    } 
+    10%{
+        top: 100%;
+    }
+    20%{top:200%}
+    30%{top:300%}
+    40%{top:1000px}
+    50%{top:1200px}
+    60%{top:1400px}
+    70%{top:1600px}
+    80%{top:1900px}
+    90%{top:2200px}
+    100%{top:100vh}
+    /* from{
+        top:-10px
+    } to{
+        bottom: 0px;
+    } */
+
+}
+#ball1{
+    right: 10%;
+    background-color: rgb(255, 255, 255);
+}
+#ball2{
+    animation-delay: 1s;
+    right: 20%;
+    background-color: rgb(242, 141, 68);
+}
+#ball3{
+ 
+    right: 30%;
+    animation-delay: 0.4s;
+    background-color: rgb(125, 90, 207);
+}
+#ball4{
+   
+    right: 40%;
+    animation-delay: 2.5s;
+    background-color: rgb(19, 139, 29);
+}
+#ball5{
+  
+    right: 50%;
+    animation-delay: 3.2s;
+    background-color: rgb(241, 59, 220);
+}
+#ball6{
+ 
+  right: 60%;
+  animation-delay: 1.8s;
+  background-color: rgb(233, 150, 150);
+}
+#ball7{
+ 
+    right: 80%;
+    animation-delay: 10.8s;
+    background-color: saddlebrown;
+}
+#ball8{
+  
+    right: 70%;
+    animation-delay: 11.2s;
+    background-color: rgb(216, 180, 223);
+}
+#ball9{
+  
+    left:10px;
+    animation-delay: 12s;
+    background-color: rgb(102, 96, 91);
+}
+#ball10{
+ 
+    right: 10px;
+    animation-delay: 12.6s;
+    background-color: rgb(149, 177, 26);
+}
+#ball11{
+   
+    right: 90%;
+    animation-delay: 13s;
+    background-color: rgb(56, 221, 50);
+}
+#ball12{
+ 
+    left: 90%;
+    animation-delay: 2.1s;
+    background-color: rgb(31, 80, 72);
+}
+#ball23{
+    animation-delay: 3.8;
+    right: 10%;
+    background-color: rgb(255, 255, 255);
+}
+#ball13{
+    animation-delay: 4s;
+    right: 20%;
+    background-color: rgb(242, 141, 68);
+}
+#ball14{
+ 
+    right: 30%;
+    animation-delay: 4.8s;
+    background-color: rgb(125, 90, 207);
+}
+#ball24{
+   
+    right: 40%;
+    animation-delay: 5s;
+    background-color: rgb(19, 139, 29);
+}
+#ball15{
+  
+    right: 50%;
+    animation-delay: 4.8s;
+    background-color: rgb(241, 59, 220);
+}
+#ball16{
+ 
+  right: 60%;
+  animation-delay: 6s;
+  background-color: rgb(233, 150, 150);
+}
+#ball17{
+ 
+    right: 80%;
+    animation-delay: 6.8s;
+    background-color: saddlebrown;
+}
+#ball18{
+  
+    right: 70%;
+    animation-delay: 7s;
+    background-color: rgb(216, 180, 223);
+}
+#ball19{
+  
+    left:10px;
+    animation-delay: 7.8s;
+    background-color: rgb(102, 96, 91);
+}
+#ball20{
+ 
+    right: 10px;
+    animation-delay: 9s;
+    background-color: rgb(50, 221, 193);
+}
+#ball21{
+   
+    right: 90%;
+    animation-delay: 9.8s;
+    background-color: rgb(102, 96, 91);
+}
+#ball22{
+ 
+    left: 90%;
+    animation-delay: 10s;
+    background-color: rgb(43, 16, 88);
 }
