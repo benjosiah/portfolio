@@ -15,8 +15,8 @@
     <!-- Skills -->
     <div class="pb-10 w-4/5 md:w-full m-auto ">
     <h1 class=" text-grey-light">Skills :</h1>
-    <div class="flex flex-wrap lg:justify-between justify-around h-full w-full">
-        <div class=" sm:w-4/5 md:w-2/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+    <div class="flex text-black font-black flex-wrap lg:justify-between justify-around h-full w-full">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">   Programing Languages :</h3>
           <ul>
             <li v-for="language in Skills.languages"  :key="language" class=" inline pr-6">
@@ -25,7 +25,7 @@
             </li>
           </ul>
         </div>
-        <div class="  sm:w-4/5 md:w-2/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class="  sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker ">  Frameworks :</h3>
           <ul>
             <li v-for="framework in Skills.Frameworks"  :key="framework" class=" inline pr-6">
@@ -34,20 +34,20 @@
             </li>
           </ul>
         </div>
-        <div class="md:w-2/5 sm:w-4/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class="md:w-2/5 sm:w-4/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker ">   Vue :</h3>
           <ul>
             <li v-for="vue in Skills.vue"  :key="vue" class=" inline pr-6">
-               <i :class="`${vue.icon} text-blue-darker `"></i> 
+               <i :class="`${vue.icon} text-green-darker `"></i> 
                {{vue.vue}}
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">  Laravel :</h3>
           <ul>
             <li v-for="laravel in Skills.laravel"  :key="laravel" class=" inline pr-6">
-               <i :class="`${laravel.icon} text-blue-darker`"></i> 
+               <i :class="`${laravel.icon} text-red-darker`"></i> 
                {{laravel.laravel}}
             </li>
           </ul>
@@ -61,7 +61,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Storage/Database :</h3>
           <ul>
             <li v-for="storage in Skills.Storage"  :key="storage" class=" inline pr-6">
@@ -70,7 +70,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-white opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-dark opacity-100 mt-4 px-8 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Cloud/Hosting :</h3>
           <ul>
             <li v-for="storage in Skills.Cloud"  :key="storage" class=" inline pr-6">
@@ -83,22 +83,25 @@
     </div>
     <!-- Projects -->
     <div class=" container m-auto">
-      <div class="flex flex-wrap justify-center w-full pb-10">
+      <h1 class=" text-white font-bold">
+        Projects :
+      </h1>
+      <div class="flex flex-wrap justify-center  w-full pb-10">
         
-        <div v-for="Project in Projects"  :key="Project"  class="bg-black text-blue-lightest h-auto sm:w-pop lg:w-2/5 m-1 py-4 px-2">
-            <h3>{{Project.name}}</h3>
-            <p v-html="Project.description" class="border-solid border-grey border-0  border-b-2 h-16"></p>
+        <div v-for="Project in Projects"  :key="Project"  class="  h-auto bg-black text-blue-lightest  w-pop lg:w-2/5 m-1 py-4 px-2">
+            <h3 class=" font-bold">{{Project.name}}</h3>
+            <p v-html="Project.description" class="border-solid border-grey  h-24 border-0  border-b-2"></p>
             <ul class="p-0">
-              <li class=" inline pr-3">
-               <i class="fas fa-code text-blue-darker"></i> 
+              <li class=" inline pr-3" v-if="Project.code">
+               <i class="fas fa-code text-yellow-dark"></i> 
                Code
               </li>
-               <li class="inline pr-3">
-               <i class="fas fa-chart-line text-blue-darker"></i> 
+               <li class="inline pr-3 cursor-pointer">
+               <i class="fas fa-chart-line text-green-dark"></i> 
                Live URL
               </li> 
                <li class="inline pr-3">
-               <i class="fas fa-file-word text-blue-darker"></i> 
+               <i class="fas fa-file-word text-blue-dark"></i> 
                Docs
               </li>
             </ul>
@@ -179,20 +182,20 @@ export default {
       },
       Projects:[
 
-        {name:"Twitter-UI-clone", description:"A clone of the <a href=''> Twitter</a> UI", code:"", back:"", Url:"", tools:["Vue", "Tailwindcss"], docs:""},
-        {name:"Todo App", description:"A regular todo Application with user Authentication", code:"", Url:"", tools:["Vue","vuex", "laravel", "axios", "pasport", "guzzle"], docs:""},
-        {name:"Social Network", description:"A social Network replical. with likes, comments follow and messaging functionalities", code:"", Url:"", tools:["laravel", "bootstrap"], docs:""},
-        {name:"flexit", description:"An Online Store with ", code:"", Url:"", tools:["laravel", "bootstrap", "guzzle"], docs:""},
-        {name:"Real Calculator", description:"", code:"", Url:"", tools:["vue"], docs:""},
-        {name:"PHP framwork", description:"", code:"", Url:"", tools:["PHP"], docs:""},
-        {name:"Todo UI", description:"", code:"", Url:"", tools:["vanilla Javascript"], docs:""},
-        {name:"CUR VER", description:"", code:"", Url:"", tools:["vue", "Vue-recource","Rapid Api" ], docs:""},
-        {name:"Banker PHP", description:"", code:"", Url:"", tools:["PHP", "cURL", "Rave Api"], docs:""},
-        {name:"MyDiary", description:"", code:"", Url:"", tools:["Vue", "Vue-resource", "fire Authentication", "fire Store"], docs:""},
+        {name:"Twitter-UI-clone", description:"A clone of the <a href=''> Twitter</a> UI", code:"", Url:"", tools:["Vue", "Tailwindcss"]},
+        {name:"Todo App", description:"A regular todo Application with user Authentication", code:"", back:"", Url:"", tools:["Vue","vuex", "laravel", "axios", "pasport", "guzzle"]},
+        {name:"Social Network", description:"A social Network replical. with likes, comments follow and messaging functionalities", code:"", tools:["laravel", "bootstrap"], docs:""},
+        {name:"flexit", description:"An Online Store with ", code:"", tools:["laravel", "bootstrap", "guzzle"]},
+        {name:"Real Calculator", description:"A basic business calculator,", code:"", Url:"", tools:["vue"]},
+        {name:"PHP framwork", description:"A PHP MVC framworkwork project for web development with templating engine, costome routing database migrations and a command line experience", code:"", tools:["PHP"], docs:""},
+        {name:"Todo UI", description:"A regular javaScript todo project", code:"", Url:"", tools:["vanilla Javascript"]},
+        {name:"CUR VER", description:"A currency converter", code:"", tools:["vue", "Vue-recource","Rapid Api" ]},
+        {name:"Banker PHP", description:"A PHP parckage that aids online payment integration using flutterwave's rave api", code:"", Url:"", tools:["PHP", "cURL", "Rave Api"], docs:""},
+        {name:"MyDiary", description:"A diary application. with user Authenticatin", code:"", tools:["Vue", "Vue-resource", "fire Authentication", "fire Store"]},
       ],
       socials:{
-        facebook:"",
-        twitter:"",
+        facebook:"https://",
+        twitter:"https://twitter.com/josiahben_",
         instagram:"",
         whatsapp:"",
         linklnd:"",
