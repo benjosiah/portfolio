@@ -1,18 +1,28 @@
 <template>
-  <div id="app" class=" w-full"> 
+  <div id="app" class=" w-full h-screen overflow-y-scroll"> 
+    <div id="pp"></div>
+    <div id="ppp"></div>
     <!-- landing -->
     <div class="flex flex-wrap w-full container h-screen m-auto items-center justify-around">
       
       <div class="text-white text-center text-2xl w-9/20 border-solid">
         <h1 class="py-0 my-0">I am Ben Josiah</h1>
-        <h3 class="py-0 my-1">Full-Stack Developer</h3>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, voluptatibus.
+        <h3 class="py-0 my-1">Full-Stack Web Developer</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, voluptatibus.
+        </p>
       </div>
       <div class="w-9/20 pr-16 text-center border-solid">
         <img src="./assets/logo.png" alt="">
       </div>
     </div>
     <!-- Skills -->
+    <div  v-if="show" class=" bg-white  w-24 h-screen fixed pin-t"> 
+
+    </div>
+     <div @click="show=true" @mouseenter="showSidebar"  class=" w-24 h-screen bg-transperent fixed pin-t" > 
+
+    </div>
     <div class="pb-10 w-4/5 md:w-full m-auto ">
     <h1 class=" text-grey-light">Skills :</h1>
     <div class="flex text-black font-black flex-wrap lg:justify-between justify-around h-full w-full">
@@ -117,7 +127,7 @@
         </div>
       </div>
     </div> 
-    <div class=" hidden">
+    <div class=" ">
       <div id="ball1" class="ball"></div>
       <div id="ball2" class="ball"></div>
       <div id="ball3" class="ball"></div>
@@ -128,7 +138,7 @@
       <div id="ball8" class="ball"></div>
       <div id="ball9" class="ball"></div>
       <div id="ball10" class="ball"></div>
-      <div id="ball11" class="ball"></div>
+      <!-- <div id="ball11" class="ball"></div>
       <div id="ball12" class="ball"></div>
       <div id="ball13" class="ball"></div>
       <div id="ball14" class="ball"></div>
@@ -141,7 +151,7 @@
       <div id="ball19" class="ball"></div>
       <div id="ball20" class="ball"></div>
       <div id="ball121" class="ball"></div>
-      <div id="ball22" class="ball"></div>
+      <div id="ball22" class="ball"></div> -->
     </div>
     
   </div>
@@ -217,7 +227,7 @@ export default {
         {name:"Todo UI", description:"A regular javaScript todo project", code:"", Url:"", tools:["vanilla Javascript"]},
         {name:"CUR VER", description:"A currency converter", code:"", tools:["vue", "Vue-recource","Rapid Api" ]},
         {name:"Banker PHP", description:"A PHP parckage that aids online payment integration using flutterwave's rave api", code:"", Url:"", tools:["PHP", "cURL", "Rave Api"], docs:""},
-        {name:"MyDiary", description:"A diary application. with user Authenticatin", code:"", tools:["Vue", "Vue-resource", "fire Authentication", "fire Store"]},
+        {name:"MyDiary", description:"A diary application. with user Authentication", code:"", tools:["Vue", "Vue-resource", "fire Authentication", "fire Store"]},
       ],
       socials:{
         facebook:"https://",
@@ -228,12 +238,26 @@ export default {
         github:"",
         midium:"",
         hashnode:""
-      }
+      },
+      show:false
+    }
+  },
+  methods : {
+    showSidebar(){
+     this.show=true
     }
   }
 }
 </script>
 
 <style>
+  .slide{
+    left: 0px;
+    /* animation: show 5s ease-in-out; */
+  }
 
+  @keyframes show {
+    from{left: -10px;}
+    to{left: 0px;}
+  }
 </style>
