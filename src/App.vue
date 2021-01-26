@@ -3,17 +3,17 @@
     <div id="pp"></div>
     <div id="ppp"></div>
     <!-- landing -->
-    <div class="flex flex-wrap w-full container h-screen m-auto items-center justify-around">
-      
-      <div class="text-white text-center text-2xl w-9/20 border-solid">
+    <div class=" w-full container h-screen m-auto items-center justify-around mb-20 head">
+      <div class=" pr-16 text-center border-solid rounded-full logo">
+        <img src="./assets/logo.png" alt="" class="">
+      </div>
+
+      <div class="text-white text-center text-2xl border-solid  text">
         <h1 class="py-0 my-0">I am Ben Josiah</h1>
         <h3 class="py-0 my-1">Full-Stack Web Developer</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, voluptatibus.
         </p>
-      </div>
-      <div class="w-9/20 pr-16 text-center border-solid">
-        <img src="./assets/logo.png" alt="">
       </div>
     </div>
     <!-- Skills -->
@@ -23,7 +23,7 @@
      <div @click="show=true" @mouseenter="showSidebar"  class=" w-24 h-screen bg-transperent fixed pin-t" > 
 
     </div>
-    <div class="pb-10 w-4/5 md:w-full m-auto ">
+    <div class="pb-10 w-4/5 md:w-full m-auto mt-10 ">
     <h1 class=" text-grey-light">Skills :</h1>
     <div class="flex text-black font-black flex-wrap lg:justify-between justify-around h-full w-full">
         <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
@@ -98,9 +98,9 @@
       </h1>
       <div class="flex flex-wrap justify-center  w-full pb-10">
         
-        <div v-for="Project in Projects"  :key="Project"  class="  h-auto bg-black text-blue-lightest  w-pop lg:w-2/5 m-1 py-4 px-2">
+        <div v-for="Project in Projects"  :key="Project"  class="pro h-auto bg-black text-blue-lightest m-1 py-4 px-2">
             <h3 class=" font-bold">{{Project.name}}</h3>
-            <p v-html="Project.description" class="border-solid border-grey  h-24 border-0  border-b-2"></p>
+            <p v-html="Project.description" class="border-solid border-grey hi border-0  border-b-2"></p>
             <ul class="p-0">
               <li class=" inline pr-3" v-if="Project.code">
                <i class="fas fa-code text-yellow-dark"></i> 
@@ -255,9 +255,56 @@ export default {
     left: 0px;
     /* animation: show 5s ease-in-out; */
   }
+.pro{
+  width: 23%;
+}
 
-  @keyframes show {
-    from{left: -10px;}
-    to{left: 0px;}
-  }
+
+.text{
+  order: 1;
+  width: 45%;
+}
+
+.logo{
+  width: 45%;
+}
+
+
+ @media screen and (max-width: 997px){
+   .pro{
+     width:30%;
+   }
+
+   .hi{
+     min-height: 100px;
+   }
+
+ }
+
+@media screen and (max-width: 756px){
+.pro{
+  width:45%;
+}
+
+.head{
+  display: block;
+}
+
+.text{
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width: 480px){
+.pro{
+  width:90%;
+}
+}
+
+.head{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 </style>

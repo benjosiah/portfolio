@@ -7,7 +7,7 @@ body{
     overflow: hidden;
     margin: 0px;
     padding: 0px;
-    background: #140621;
+    background: #160424;
 
     background-image: 
     radial-gradient(white, rgba(255, 255, 255, 0.13) 2px, transparent 40px),
@@ -102,56 +102,56 @@ body{
     background-color: rgb(255, 255, 255);
 }
 #ball2{
-    animation-delay: 1s;
+    animation-delay: 11s;
     right: 20%;
     background-color: rgb(242, 141, 68);
 }
 #ball3{
  
     right: 30%;
-    animation-delay: 0.4s;
+    animation-delay: 10.4s;
     background-color: rgb(125, 90, 207);
 }
 #ball4{
    
     right: 40%;
-    animation-delay: 2.5s;
+    animation-delay: 12.5s;
     background-color: rgb(19, 139, 29);
 }
 #ball5{
   
     right: 50%;
-    animation-delay: 3.2s;
+    animation-delay: 13.2s;
     background-color: rgb(241, 59, 220);
 }
 #ball6{
  
   right: 60%;
-  animation-delay: 1.8s;
+  animation-delay: 11.8s;
   background-color: rgb(233, 150, 150);
 }
 #ball7{
  
     right: 80%;
-    animation-delay: 10.8s;
+    animation-delay: 20.8s;
     background-color: saddlebrown;
 }
 #ball8{
   
     right: 70%;
-    animation-delay: 11.2s;
+    animation-delay: 21.2s;
     background-color: rgb(216, 180, 223);
 }
 #ball9{
   
     left:10px;
-    animation-delay: 12s;
+    animation-delay: 22s;
     background-color: rgb(102, 96, 91);
 }
 #ball10{
  
     right: 10px;
-    animation-delay: 12.6s;
+    animation-delay: 22.6s;
     background-color: rgb(149, 177, 26);
 }
 /* #ball11{
