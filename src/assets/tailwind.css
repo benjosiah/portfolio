@@ -236,3 +236,13 @@ body{
     animation-delay: 10s;
     background-color: rgb(43, 16, 88);
 } */
+
+@media screen and (max-width: 480px){
+   
+    .balls{
+      display: none;
+    }
+    
+    }
+    
+    
