@@ -6,12 +6,13 @@
        <i class="fas fa-bars font-bold text-2xl mt-2 ml-2 text-white"></i>
      </span>
      <div class="header">
-       <ul class=" font-serif">
+       <ul class=" font-serif pl-12">
          <li>
           
            <a href="/" >
-             <i class="fas fa-code text-white text-2xl pr-2"></i>
-            <span class="text-blue text-2xl font-sans p-0 m-0">Code</span> <span class="text-purple-lighter font-mono p-0 m-0">Master</span>
+             <!-- <i class="fas fa-code text-white text-2xl pr-2"></i> -->
+             <img src="./assets/file-code-icon.png" class="w-8 absolute h-8 pin-t mt-3"  alt="">
+            <span class="text-blue text-2xl font-sans p-0 m-0 pl-8">Code</span> <span class="text-purple-lighter font-mono p-0 m-0">Master</span>
            </a> 
            
          </li>
@@ -32,7 +33,9 @@
      <div id="side" class="fade-in absolute ">
        <span @click="close" class="close absolute"><i class="fas fa-times text-2xl text-black"></i></span>
        <a href="/" @click="close" >
-             <i class="fas fa-code text-black text-2xl"></i>
+             <!-- <i class="fas fa-code text-black text-2xl"></i>
+              -->
+               <img src="./assets/file-code-icon.png" class="w-8 absolute h-8 pin-t mt-3"  alt="">
             <span class="text-blue-dark text-2xl font-sans p-0 m-0">Code</span> <span class="text-purple-dark font-mono p-0 m-0">Master</span>
           </a> 
       <ul class=" font-serif text-xl font-bold">
