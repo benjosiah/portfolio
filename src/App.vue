@@ -9,14 +9,14 @@
        <ul class=" font-serif">
          <li>
           
-           <a href="/#skills" >
+           <a href="/" >
              <i class="fas fa-code text-white text-2xl pr-2"></i>
             <span class="text-blue text-2xl font-sans p-0 m-0">Code</span> <span class="text-purple-lighter font-mono p-0 m-0">Master</span>
            </a> 
            
          </li>
          <li>
-          <a href="/" >Skills</a> 
+          <a href="/#skills" >Skills</a> 
          </li>
          <li>
             <a href="/#projects" >Projects</a> 
@@ -24,13 +24,6 @@
          </li>
          <li>
             <a href="/#contact" >Contact</a> 
-           
-         </li>
-         <li>
-           <a href="/#socials" >Socials</a> 
-           
-         </li>
-         <li>
            
          </li>
        </ul>
@@ -172,14 +165,17 @@
                </a>
               </li>
                <li v-if="Project.Url" class="inline pr-3 cursor-pointer text-green-dark ">
-               <i class="fas fa-chart-line "></i> 
-               Live URL
+                <a :href="Project.Url" class=" text-green-dark no-underline">
+                  <i class="fas fa-chart-line "></i> 
+                  Live URL
+                </a>
               </li> 
-               <li  v-if="Project.docs" class="inline pr-3 text-blue-dark">
-                 <a href="">
-               <i class="fas fa-file-word "></i> 
-               Docs
-               </a>
+              
+               <li  v-if="Project.docs" class="inline pr-3 ">
+                <a :href="Project.docs" class=" text-blue no-underline">
+                  <i class="fas fa-file-word "></i> 
+                  Docs
+                </a>
               </li>
             </ul>
             <h5 class="text-sm m-0 p-1">
@@ -308,15 +304,15 @@ export default {
       },
       Projects:[
 
-        {name:"Twitter-UI-clone", description:"A clone of the <a href='https://twitter.com'> Twitter</a> UI", code:"https://github.com/benjosiah/twitter-clone", Url:"", tools:["Vue", "Tailwindcss"]},
-        {name:"Todo App", description:"A regular todo Application with user Authentication", code:"https://github.com/benjosiah/todo-app-vue-frontend", back:"https://github.com/benjosiah/todo_app_laravel_api", Url:"", tools:["Vue","vuex", "laravel", "axios", "pasport", "guzzle"]},
+        {name:"Twitter-UI-clone", description:"A clone of the <a href='https://twitter.com'> Twitter</a> UI", code:"https://github.com/benjosiah/twitter-clone", Url:"https://vuetwitter.netlify.app/", tools:["Vue", "Tailwindcss"]},
+        {name:"Todo App", description:"A regular todo Application with user Authentication", code:"https://github.com/benjosiah/todo-app-vue-frontend", back:"https://github.com/benjosiah/todo_app_laravel_api", Url:"https://wonderful-carson-956137.netlify.app/", tools:["Vue","vuex", "laravel", "axios", "pasport", "guzzle"]},
         {name:"Social Network", description:"A social Network replical. with likes, comments follow and messaging functionalities", code:"https://github.com/benjosiah/social-network", tools:["laravel", "bootstrap"], docs:""},
         {name:"flexit", description:"An Online Store with ", code:"https://github.com/benjosiah/flexit", tools:["laravel", "bootstrap", "guzzle"]},
-        {name:"Real Calculator", description:"A basic business calculator,", code:"https://github.com/benjosiah/real-calculator", Url:"", tools:["vue"]},
+        {name:"Real Calculator", description:"A basic business calculator,", code:"https://github.com/benjosiah/real-calculator", Url:"https://calsmart1234.web.app/", tools:["vue"]},
         {name:"PHP framwork", description:"A PHP MVC framworkwork project for web development with templating engine, costome routing database migrations and a command line experience", code:"https://github.com/benjosiah/php-framework", tools:["PHP"], docs:""},
-        {name:"Todo UI", description:"A regular javaScript todo project", code:"https://github.com/benjosiah/todo-app-javascript", Url:"", tools:["vanilla Javascript"]},
+        {name:"Todo UI", description:"A regular javaScript todo project", code:"https://github.com/benjosiah/todo-app-javascript", Url:"https://todo-ui.netlify.app/", tools:["vanilla Javascript"]},
         {name:"CUR VER", description:"A currency converter", code:"https://github.com/benjosiah/CUR-VER", tools:["vue", "Vue-recource","Rapid Api" ]},
-        {name:"Banker PHP", description:"A PHP parckage that aids online payment integration using flutterwave's rave api", code:"https://github.com/benjosiah/ben-banker_php", Url:"", tools:["PHP", "cURL", "Rave Api"], docs:""},
+        {name:"Banker PHP", description:"A PHP parckage that aids online payment integration using flutterwave's rave api", code:"https://github.com/benjosiah/ben-banker_php", Url:"", tools:["PHP", "cURL", "Rave Api"], docs:"https://master.hashnode.dev/ben-bankerphp"},
         {name:"MyDiary", description:"A diary application. with user Authentication", code:"https://github.com/benjosiah/myDiary", tools:["Vue", "Vue-resource", "fire Authentication", "fire Store"]},
       ],
       socials:{
@@ -356,8 +352,9 @@ export default {
 .header{
   display: block;
   width: 100%;
-  height: 50px;
-  position: relative;
+  height: 70px;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.938);
 }
 .header ul{
   width: 100%;
