@@ -60,17 +60,14 @@
        </ul>
      </div>
     <!-- landing -->
-    <div class=" w-full container h-screen m-auto justify-around  mb-2 head">
+    <div class=" w-full container h-screen m-auto justify-around mt-12 items-center head">
       <div class=" text-center rounded-full logo">
         <img src="./assets/gMFLZ1cD_400x400.jpg" alt="" class="w-2/3 m-auto">
       </div>
 
       <div class="text-white text-center text-2xl text">
         <h1 class="py-0 my-0">I am Ben Josiah</h1>
-        <h3 class="py-0 my-1">Full-Stack Web Developer</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, voluptatibus.
-        </p>
+        <h5 class="py-0 my-1">Full-Stack Web Developer</h5>
       </div>
     </div>
     
@@ -106,7 +103,7 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-4 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker">  Laravel :</h3>
           <ul>
             <li v-for="(laravel, l) in Skills.laravel"  :key="l" class=" inline pr-6">
@@ -124,21 +121,25 @@
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-4 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Storage/Database :</h3>
           <ul>
-            <li v-for="(storage, Sk) in Skills.Storage"  :key="Sk" class=" inline pr-6">
-               <i :class="`${storage.icon} text-blue-darker`"></i> 
-               {{storage.name}}
+            <li v-for="(storage, Sk) in Skills.Storage"  :key="Sk" class=" inline p-2 pb-2">
+               <i :class="`${storage.icon} text-blue-darker`">
+                 {{storage.name}}
+                 </i> 
+               
             </li>
           </ul>
         </div>
-        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-8 py-2 rounded-lg">
+        <div class=" sm:w-4/5 md:w-2/5 bg-grey-light opacity-100 mt-4 px-4 py-2 rounded-lg">
           <h3 class="text-semibold text-blue-darker"> Cloud/Hosting :</h3>
           <ul>
-            <li v-for="(storage, s) in Skills.Cloud"  :key="s" class=" inline pr-6">
-               <i :class="`${storage.icon} text-blue-darker`"></i> 
-               {{storage.name}}
+            <li v-for="(storage, s) in Skills.Cloud"  :key="s" class=" inline p-4 pb-2">
+               <i :class="`${storage.icon} text-blue-darker`">
+                  {{storage.name}}
+                </i> 
+              
             </li>
           </ul>
         </div>
@@ -386,8 +387,10 @@ export default {
 
 .menue{
   position: absolute;
+  padding:20;
   top: 0%;
   left: 0;
+  background: #000;
   display:none;
 }
 
@@ -395,6 +398,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
 }
 
 .text{
@@ -479,6 +483,8 @@ export default {
 
 .head{
   display: block;
+  max-height: 300px;
+
 }
 .logo{
   width: 60%;
